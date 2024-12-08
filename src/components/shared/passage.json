@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_shared_passage",
+  "info": {
+    "displayName": "Passage",
+    "description": "Informations sur le passage d'un artiste"
+  },
+  "options": {},
+  "attributes": {
+    "scene": {
+      "type": "enumeration",
+      "enum": [
+        "Main Stage",
+        "Echo Stage",
+        "Pulse Stage"
+      ]
+    },
+    "jour": {
+      "type": "enumeration",
+      "enum": [
+        "Vendredi",
+        "Samedi"
+      ]
+    },
+    "horaire": {
+      "type": "time"
+    },
+    "duree": {
+      "type": "integer",
+      "min": 15,
+      "max": 180,
+      "default": 60
+    },
+    "edition": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::edition.edition",
+      "required": true
+    }
+  }
+} 

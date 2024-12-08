@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_reseaux_sociaux",
+  "info": {
+    "displayName": "Réseaux Sociaux",
+    "description": "Liens vers les différents réseaux sociaux"
+  },
+  "options": {},
+  "attributes": {
+    "instagram": {
+      "type": "string"
+    },
+    "youtube": {
+      "type": "string"
+    },
+    "spotify": {
+      "type": "string"
+    }
+  }
+} 

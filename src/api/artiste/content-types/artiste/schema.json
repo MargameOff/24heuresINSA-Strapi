@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "artistes",
+  "info": {
+    "singularName": "artiste",
+    "pluralName": "artistes",
+    "displayName": "Artiste",
+    "description": "Collection des artistes du festival"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nom": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "genres": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::genre-musical.genre-musical",
+      "inversedBy": "artistes"
+    },
+    "passage": {
+      "type": "component",
+      "component": "shared.passage"
+    },
+    "videoYoutube": {
+      "type": "string"
+    },
+    "reseauxSociaux": {
+      "type": "component",
+      "component": "shared.reseaux-sociaux"
+    },
+    "dateDePublication": {
+      "type": "datetime"
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "redirections",
+  "info": {
+    "singularName": "redirection",
+    "pluralName": "redirections",
+    "displayName": "Redirection",
+    "description": "Gestion des redirections vers des URLs externes ou des fichiers"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "sourcePath": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "description": "Le chemin source (ex: /kitpresse)"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "external_url",
+        "file"
+      ],
+      "required": true,
+      "description": "Type de redirection"
+    },
+    "externalUrl": {
+      "type": "string",
+      "description": "URL externe de destination"
+    },
+    "file": {
+      "type": "media",
+      "multiple": false,
+      "description": "Fichier à servir (PDF, images, etc.)"
+    },
+    "description": {
+      "type": "text",
+      "description": "Description optionnelle de la redirection"
+    },
+    "active": {
+      "type": "boolean",
+      "default": true,
+      "description": "Activer/désactiver la redirection"
+    }
+  }
+}

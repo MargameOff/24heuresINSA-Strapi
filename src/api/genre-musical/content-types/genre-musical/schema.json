@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "genres_musicaux",
+  "info": {
+    "singularName": "genre-musical",
+    "pluralName": "genres-musicaux",
+    "displayName": "Genre Musical",
+    "description": "Les différents genres musicaux des artistes"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nom": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "artistes": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::artiste.artiste",
+      "mappedBy": "genres"
+    }
+  }
+}
