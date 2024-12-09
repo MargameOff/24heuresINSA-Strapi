@@ -1,0 +1,19 @@
+{
+  "kind": "singleType",
+  "collectionName": "maintenances",
+  "info": {
+    "singularName": "maintenance",
+    "pluralName": "maintenances",
+    "displayName": "Maintenance",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "actif": {
+      "type": "boolean"
+    }
+  }
+}

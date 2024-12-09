@@ -10,7 +10,8 @@
     "start": "strapi start",
     "strapi": "strapi",
     "dev": "cross-env NODE_ENV=development ENV_PATH=.env.development npm run develop",
-    "prod": "cross-env NODE_ENV=production ENV_PATH=.env.production npm run start"
+    "prod": "cross-env NODE_ENV=production ENV_PATH=.env.production npm run start",
+    "devprod": "cross-env NODE_ENV=development ENV_PATH=.env.production npm run develop"
   },
   "dependencies": {
     "@strapi/plugin-cloud": "5.5.0",
