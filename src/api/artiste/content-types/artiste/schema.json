@@ -20,6 +20,13 @@
       "type": "text",
       "required": true
     },
+    "rank": {
+      "type": "integer",
+      "required": true,
+      "default": 999,
+      "min": 0,
+      "description": "Position d'affichage de l'artiste (0 = premier)"
+    },
     "image": {
       "type": "media",
       "multiple": false,

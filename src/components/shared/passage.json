@@ -7,18 +7,16 @@
   "options": {},
   "attributes": {
     "scene": {
-      "type": "enumeration",
-      "enum": [
-        "Main Stage",
-        "Echo Stage",
-        "Pulse Stage"
-      ]
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::scene.scene"
     },
     "jour": {
       "type": "enumeration",
       "enum": [
         "Vendredi",
-        "Samedi"
+        "Samedi",
+        "Dimanche"
       ]
     },
     "horaire": {

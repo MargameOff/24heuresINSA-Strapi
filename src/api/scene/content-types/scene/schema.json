@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "scenes",
+  "info": {
+    "singularName": "scene",
+    "pluralName": "scenes",
+    "displayName": "Scene",
+    "description": "Les différentes scènes du festival"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nom": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "passages": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::artiste.artiste",
+      "mappedBy": "scene"
+    }
+  }
+}
